@@ -1,0 +1,49 @@
+{
+  "name": "transl-cli",
+  "version": "0.0.1",
+  "description": "A translate tool in your command line",
+  "main": "./dist/index.js",
+  "scripts": {
+    "build": "rollup -c rollup.config.js",
+    "dev": "rollup -w -c rollup.config.js"
+  },
+  "author": "William Chan <root@williamchan.me>",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:luckyyyyy/transl-cli.git"
+  },
+  "license": "MIT",
+  "bin": {
+    "t": "./bin/translate",
+    "transl": "./bin/translate",
+    "translate": "./bin/translate"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "readmeFilename": "README.md",
+  "files": [
+    "bin",
+    "dist",
+    "lib"
+  ],
+  "dependencies": {
+    "@types/node": "^10.12.18",
+    "chalk": "^2.4.2",
+    "html-entities": "^1.1.2",
+    "is-chinese": "^1.2.5",
+    "ora": "^3.0.0",
+    "request": "^2.81.0",
+    "xml2js": "^0.4.8",
+    "yargs": "^12.0.5"
+  },
+  "optionalDependencies": {
+    "say": "^0.15.0"
+  },
+  "devDependencies": {
+    "rollup": "^1.1.0",
+    "rollup-plugin-typescript": "^1.0.0",
+    "tslib": "^1.9.3",
+    "typescript": "^3.2.2"
+  }
+}

@@ -1,0 +1,26 @@
+#!/usr/bin/env node
+/**
+ * This file is part of the Translate.
+ * @author William Chan <root@williamchan.me>
+ */
+const chalk = require('chalk');
+const argv = require('yargs').argv;
+const argc = argv._.length;
+
+if (!argc) {
+  console.log(chalk.green('translate v' + require('../package').version));
+  console.log('Usage: t [word]');
+  // console.log('Usage: t [word] [-option]');
+  // console.log();
+  // console.log('OPTIONS');
+  // console.log();
+  // console.log('     -h      show help');
+  // console.log('     -y      use youdao translate');
+  // console.log('     -c      use iCIBA translate');
+  // console.log('     -g      use google translate');
+  console.log();
+  return;
+}
+
+var fanyi = require('../dist');
+fanyi(argc, argv._, argv);
